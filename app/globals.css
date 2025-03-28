@@ -69,3 +69,16 @@ h6 {
 button {
   cursor: pointer;
 }
+
+.generalBody {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.general {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-top: 60px;
+}
