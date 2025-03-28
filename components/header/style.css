@@ -1,0 +1,97 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--headerBg);
+  padding: 12px 24px;
+  position: sticky;
+  z-index: 9999999;
+  top: 0;
+
+  .logo {
+    text-decoration: none;
+    color: var(--titleText);
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .nav {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+      color: var(--button1Text);
+    }
+
+    a:hover {
+      border-bottom: 3px solid var(--button1);
+    }
+  }
+
+  .socialIcon {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    .modeChange {
+      border: none;
+      background: transparent;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+@media (max-width: 768px) {
+  header {
+    .nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 16px;
+      gap: 10px;
+    }
+
+    .nav.active {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #b71c1c, #000000);
+    }
+
+    .socialIcon {
+      display: none;
+    }
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
