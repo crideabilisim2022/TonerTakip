@@ -65,6 +65,64 @@ header {
   background: white;
 }
 
+.userMenu {
+  position: relative;
+  border: 2px solid var(--button);
+  padding: 4px 8px;
+  margin: 4px 8px;
+  border-radius: 4px;
+
+  .userHover {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    svg {
+      color: var(--button);
+      width: 20px;
+    }
+  }
+
+  .dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 8px;
+    z-index: 10;
+
+    a,
+    button {
+      display: block;
+      padding: 8px 12px;
+      color: black;
+      text-decoration: none;
+      background: none;
+      border: none;
+      text-align: left;
+      width: 150px;
+    }
+
+    a:hover,
+    button:hover {
+      background-color: #f5f5f5;
+    }
+  }
+
+  &:hover .dropdownMenu {
+    display: block;
+  }
+}
+
 @media (max-width: 768px) {
   header {
     .nav {

@@ -1,4 +1,3 @@
-import { InstagramIcon, LinkedinIcon, WhatsappIcon } from "@/helpers/icons";
 import "./style.css";
 
 export default function Footer() {

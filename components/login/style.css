@@ -1,0 +1,75 @@
+.authContainer {
+  max-width: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+
+  .slideLeft {
+    transform: translateX(-50%);
+  }
+
+  button {
+    border: none;
+  }
+
+  .authForms {
+    display: flex;
+    width: 200%;
+    transition: transform 0.5s ease-in-out;
+
+    .authForm {
+      display: grid;
+      gap: 8px;
+      width: 50%;
+      padding: 40px;
+      background-color: white;
+
+      h2 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      form {
+        input {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+        }
+
+        .authButton {
+          width: 100%;
+          padding: 10px;
+          background-color: #50c878;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.error {
+  font-size: 14px;
+  color: #ff3b3b;
+  margin-block: 4px;
+}
+
+.passwordField {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid #ddd;
+  border-radius: 5px; */
+}
+
+.togglePasswordButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+}
